@@ -31,16 +31,69 @@ body {
 .home__btn {
   width: 230px;
   height: 70px;
+  position: relative;
   display: flex;
   cursor: pointer;
   border-radius: 8px;
   align-items: center;
   justify-content: center;
-  background-color: cyan;
-  transition-duration: 300ms;
+  transition: 300ms all ease-out;
+}
+
+.home__btn::before {
+  content: '';
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  z-index: -1;
+  background-color: rgb(15, 214, 180);
+  transition: 300ms all ease-out;
+  transform-origin: center;
   box-shadow: 1px 6px 20px rgba(0, 0, 0, 0.15);
 }
 
-.home__btn:hover {
+.home__btn:hover::before {
+  height: 5px;
+  animation: shrink 700ms forwards 150ms;
   box-shadow: 1px 6px 25px rgba(0, 0, 0, 0.2);
+}
+
+.home__btn > p {
+  color: white;
+  font-size: 25px;
+  transition: 300ms all ease-out;
+  position: relative;
+}
+
+.home__btn:hover > p {
+  top: 8px;
+  color: rgb(15, 214, 180);
+}
+
+@keyframes shrink {
+  0% {
+    width: 20%;
+    left: 57;
+  }
+
+  20% {
+    width: 40%;
+    left: 130px;
+  }
+  40% {
+    width: 10%;
+    left: 0;
+  }
+
+  70% {
+    width: 100%;
+    left: 57px;
+  }
+
+  100% {
+    width: 100%;
+    left: 0;
+  }
 }
