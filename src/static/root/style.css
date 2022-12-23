@@ -1,0 +1,46 @@
+@import url('https://fonts.googleapis.com/css2?family=Wallpoet&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  font-family: 'Wallpoet', cursive;
+}
+
+html,
+body {
+  width: 100%;
+}
+
+#root {
+  background-color: #ebe7bc;
+  gap: 20px;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.main__txt {
+  font-size: 120px;
+  font-weight: bold;
+}
+
+/* Home btn */
+.home__btn {
+  width: 230px;
+  height: 70px;
+  display: flex;
+  cursor: pointer;
+  border-radius: 8px;
+  align-items: center;
+  justify-content: center;
+  background-color: cyan;
+  transition-duration: 300ms;
+  box-shadow: 1px 6px 20px rgba(0, 0, 0, 0.15);
+}
+
+.home__btn:hover {
+  box-shadow: 1px 6px 25px rgba(0, 0, 0, 0.2);
+}

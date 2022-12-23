@@ -1,0 +1,24 @@
+{
+  "name": "buttons",
+  "version": "1.0.0",
+  "description": "",
+  "main": "src/_server.js",
+  "scripts": {
+    "test": "jest",
+    "start": "nodemon -q --watch src src/_server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "express": "^4.18.2",
+    "morgan": "^1.10.0"
+  },
+  "devDependencies": {
+    "concurrently": "^7.6.0",
+    "jest": "^29.3.1",
+    "nodemon": "^2.0.20"
+  }
+}
